@@ -1,0 +1,8 @@
+prefix=/home/ahsan/catkin_ws_new/devel
+
+Name: my_ros_package
+Description: Description of my_ros_package
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy std_msgs
