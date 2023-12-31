@@ -1,50 +1,57 @@
+# ROS Catkin Workspace
 
-# My ROS Package
+This repository contains a [ROS](http://www.ros.org/) Catkin workspace named `catkin_ws_new`. Below is a brief overview of the directory structure:
 
-## Description
+```
+.
+├── build               # Build artifacts
+├── devel               # Development setup
+├── src                 # Source code of ROS packages
+│   ├── my_ros_package  # Custom ROS package
+│   │   ├── include
+│   │   │   └── my_ros_package
+│   │   ├── src
+│   │   │   ├── my_cpp_node.cpp
+│   │   │   └── my_python_node.py
+│   │   ├── CMakeLists.txt
+│   │   ├── package.xml
+│   ├── new             # Another ROS package
+│   │   ├── include
+│   │   ├── src
+│   │   │   └── hello.cpp
+│   │   ├── CMakeLists.txt
+│   │   ├── package.xml
+├── README.md           # Project readme file
+```
 
-Briefly describe your ROS package and its purpose.
+## Custom ROS Package (`my_ros_package`)
 
-## Prerequisites
+The `my_ros_package` directory contains a custom ROS package with the following structure:
 
-List any prerequisites or dependencies that users need to install before using your package.
+- `include/my_ros_package`: Header files for the ROS package
+- `src/my_cpp_node.cpp`: C++ node source code
+- `src/my_python_node.py`: Python node source code
+- `CMakeLists.txt`: CMake configuration file for building the package
+- `package.xml`: ROS package manifest file
 
-## Installation
+## Another ROS Package (`new`)
 
-Provide step-by-step instructions on how to install your ROS package. Include any commands or scripts that need to be executed.
+The `new` directory contains another ROS package with the following structure:
+
+- `include/new`: Header files for the ROS package
+- `src/hello.cpp`: C++ source code
+- `CMakeLists.txt`: CMake configuration file for building the package
+- `package.xml`: ROS package manifest file
+
+## Building the Workspace
+
+To build the ROS workspace, navigate to the root directory (`catkin_ws_new`) and run the following commands:
 
 ```bash
-# Example installation commands
-cd ~/catkin_ws_new
+cd catkin_ws_new
 catkin_make
 ```
 
-## Usage
+This will generate build artifacts in the `build` directory and set up the development environment in the `devel` directory.
 
-Explain how to use your ROS package. Include information on launching nodes, running scripts, or any other relevant details.
-
-```bash
-# Example usage commands
-source devel/setup.bash
-roslaunch my_ros_package my_launch_file.launch
-```
-
-## Configuration
-
-If your package requires any configuration or parameter settings, provide details on how users can customize the behavior.
-
-## Examples
-
-Include examples or use cases to help users understand how to apply your ROS package in different scenarios.
-
-## License
-
-Specify the license under which your ROS package is distributed.
-
-## Contact
-
-Provide contact information or links to relevant resources where users can get support or contribute to your project.
-
-```
-
-Replace the placeholder text with the actual details for your ROS package. Make sure to keep the instructions clear and concise. Additionally, you may want to include sections on troubleshooting, known issues, or future development plans based on the complexity of your ROS package.
+Feel free to customize and extend the ROS packages according to your project requirements.
